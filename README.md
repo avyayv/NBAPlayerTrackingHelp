@@ -33,6 +33,7 @@ The need for this code is also fairly straight-forward. For instance, if you wan
 ```
 from tracking.tracking import get_shot_time_from_range, find_player_with_ball
 game = pd.read_csv(TRACKING_DIRECTORY+"0021500056.csv")
+time = get_shot_time_from_range(game_csv, start=2880, end=2860)
 offense, defense = find_player_with_ball(game, time)
 print(offense['player_id'], defense['player_id'])
 ```
